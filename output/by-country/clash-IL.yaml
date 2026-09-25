@@ -6,18 +6,6 @@ log-level: info
 proxies:
 - name: 🇮🇱 IL 01 - xiaohe
   type: vless
-  server: 47.253.226.114
-  port: 443
-  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
-  servername: www.cloudflare.com
-  client-fingerprint: ''
-- name: 🇮🇱 IL 02 - xiaohe
-  type: vless
   server: platform113.golnamakcert.top
   port: 80
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
@@ -35,13 +23,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇱 IL 01 - xiaohe
-  - 🇮🇱 IL 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇮🇱 IL 01 - xiaohe
-  - 🇮🇱 IL 02 - xiaohe
 rules:
 - MATCH,PROXIES
